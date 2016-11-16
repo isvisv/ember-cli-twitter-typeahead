@@ -57,6 +57,7 @@ export default Ember.TextField.extend({
       displayKey: run.bind(this, (object) => {
         return get(object, this.get('displayKey'));
       }),
+      limit: 50,
       source: run.bind(this, (query, cb) => {
         const content = this.get('content');
         if (!query || query === '*') {
